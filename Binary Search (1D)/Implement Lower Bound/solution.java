@@ -1,13 +1,14 @@
 public class solution {
     public static int lowerBound(int []arr, int n, int x) {
-        int low = 0, high = n - 1;
-        int ans = n;
+        int low = 0;
+        int high = n - 1;
+        int res = n;
 
         while (low <= high) {
             int mid = (low + high) / 2;
 
             if (arr[mid] >= x) {
-                ans = mid;
+                res = mid;
             
                 high = mid - 1;
             }
@@ -15,6 +16,6 @@ public class solution {
                 low = mid + 1;
             }
         }
-        return ans;
+        return res;
     }
 }

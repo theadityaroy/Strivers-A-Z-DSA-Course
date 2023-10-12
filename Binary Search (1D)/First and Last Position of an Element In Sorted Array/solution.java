@@ -12,7 +12,7 @@ public class solution {
         if (first == n || arr.get(first) != k){
             return new int[]{-1, -1};
         }
-        
+
         return new int[] {first, lastIdx(arr, n, k)};
     }
 

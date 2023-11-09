@@ -17,6 +17,12 @@ public class solution {
                 return true;
             }
 
+            if(A[low] == A[mid] && A[mid] == A[high]){
+                low++;
+                high--;
+                continue;
+            }
+
             // Checking Left Half
             if(A[low] <= A[mid]) {
                 if(A[low] <= key && key <= A[mid]) {

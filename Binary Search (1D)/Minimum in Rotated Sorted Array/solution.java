@@ -14,6 +14,11 @@ public class solution {
 
         while(low <= high) {
             int mid = (low + high)/2;
+
+            if(arr[low] <= arr[high]){
+                res = Math.min(res, arr[low]);
+                break;
+            }
             
             if(arr[low] <= arr[mid]) {
                 res = Math.min(res, arr[low]);
